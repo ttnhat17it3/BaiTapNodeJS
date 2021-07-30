@@ -5,7 +5,7 @@ const Student = require("./model/student");
 
 app.use(express.json());
 
-db.connectDb();
+db.connectDB();
 
 app.post("/create", async (req, res) => {
   try {
@@ -24,9 +24,12 @@ app.post("/create", async (req, res) => {
       status: false,
     });
 
-    await student.save();
-
-    res.statusSend(200);
+    student.save()
+      .then(() => { res.statusSend(200); })
+      .catch(err => {
+        console.log(err);
+        res.statusSend(400);
+      });
   } catch (err) {
     res.statusSend(400);
   }
@@ -51,8 +54,12 @@ app.put("/edit/:id", async (req, res) => {
       doc.type = type;
       doc.tien = tien;
 
-      await doc.save();
-      res.statusSend(200);
+      doc.save()
+        .then(() => { res.statusSend(200); })
+        .catch(err => {
+          console.log(err);
+          res.statusSend(400);
+        });
     });
   } catch (err) {
     res.statusSend(400);
@@ -67,8 +74,12 @@ app.post("/delete", async (req, res) => {
         res.sendStatus(400);
       } else {
         doc.status = true;
-        await doc.save();
-        res.statusSend(200);
+        doc.save()
+          .then(() => { res.statusSend(200); })
+          .catch(err => {
+            console.log(err);
+            res.statusSend(400);
+          });
       }
     });
   } catch (err) {
@@ -90,6 +101,7 @@ app.get("/findById/:id", async (req, res) => {
   }
 });
 
+// /findAll?type=type&page=page&size=size
 app.get("/findAll", async (req, res) => {
   try {
     const type = req.query.type;
