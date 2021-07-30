@@ -2,6 +2,7 @@ const xlsx = require("xlsx");
 const path = require("path");
 
 // Export
+// node excel.js outputFiles\excel-from-js.xlsx
 const exportExcel = (data, workSheetColumnNames, workSheetName, filePath) => {
   const workBook = xlsx.utils.book_new();
   const workSheetData = [workSheetColumnNames, ...data];
