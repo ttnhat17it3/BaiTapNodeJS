@@ -118,6 +118,7 @@ console.log(getInfo.apply(person, ["DN"])); // Bin, 18, DN
 8. Javascript có bao nhiêu kiểu dữ liệu
 
 - Javascript có 7 kiểu dữ liệu, trong đó:
+```
   - Number      |
   - String      |
   - null        |
@@ -126,6 +127,7 @@ console.log(getInfo.apply(person, ["DN"])); // Bin, 18, DN
   - Symbol      |
 
   - Object được gọi là kiểu non-primitive
+```
 
 11. Các cách để clone một Object. Ưu điểm và nhược điểm
 
