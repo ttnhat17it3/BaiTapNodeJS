@@ -18,14 +18,14 @@
   });
 ```
 
-3. Phân biệt let và const
+3. Phân biệt `let` và `const`
 
 - Giống: đều có scope là block scope, không thể hoisting
 - Khác:
-  - let: có thể khai báo lại giá trị cho biến
-  - const: không thể khai báo lại giá trị khi đã khai báo giá trị trước đó, trừ biến có kiểu reference thì có thể cập nhật được giá trị cho thuộc tính của biến
+  - `let`: có thể khai báo lại giá trị cho biến
+  - `const`: không thể khai báo lại giá trị khi đã khai báo giá trị trước đó, trừ biến có kiểu reference thì có thể cập nhật được giá trị cho thuộc tính của biến
 
-4. Phân biệt forEach, filter, map, every, some, for thường
+4. Phân biệt `forEach`, `filter`, `map`, `every`, `some`, `for` thường
 
 ```js
 const users = [
@@ -35,7 +35,7 @@ const users = [
 ];
 ```
 
-- forEach: lặp qua từng phần tử của mảng
+- `forEach`: lặp qua từng phần tử của mảng
 
 ```js
 users.forEach((user) => console.log(user));
@@ -44,35 +44,35 @@ users.forEach((user) => console.log(user));
 // { name: 'Bon', age: 30 }
 ```
 
-- map: tạo một mảng mới bằng cách thực hiện hàm trên mỗi phần tử của mảng
+- `map`: tạo một mảng mới bằng cách thực hiện hàm trên mỗi phần tử của mảng
 
 ```js
 console.log(users.map((user) => user.name));
 // [ 'Bin', 'Ben', 'Bon' ]
 ```
 
-- filter: trả về một mảng với các phẩn tử thỏa mãn điều kiện nào đó
+- `filter`: trả về một mảng với các phẩn tử thỏa mãn điều kiện nào đó
 
 ```js
 console.log(users.filter((user) => user.age > 20));
 // [ { name: 'Bin', age: 23 }, { name: 'Bon', age: 30 } ]
 ```
 
-- every: trả về true nếu tất cả các phần tử của mảng thỏa mãn điều kiện nào đó và ngược lại
+- `every`: trả về true nếu tất cả các phần tử của mảng thỏa mãn điều kiện nào đó và ngược lại
 
 ```js
 console.log(users.every((user) => user.age > 20));
 // false
 ```
 
-- some: trả về true nếu có ít nhất một phần tử của mảng thỏa mãn điều kiện nào đó và ngược lại
+- `some`: trả về true nếu có ít nhất một phần tử của mảng thỏa mãn điều kiện nào đó và ngược lại
 
 ```js
 console.log(users.some((user) => user.age > 20));
 // true
 ```
 
-- for in: duyệt qua các key của object
+- `for in`: duyệt qua các key của object
 
 ```js
 for (let key in users[0]) console.log(key);
@@ -80,7 +80,7 @@ for (let key in users[0]) console.log(key);
 // age
 ```
 
-- for of: duyệt qua các value của object
+- `for of`: duyệt qua các value của object
 
 ```js
 for (let user of users) console.log(user);
@@ -91,14 +91,14 @@ for (let user of users) console.log(user);
 
 5. Phân biệt giá trị và địa chỉ của biến
 
-- Giá trị của biến: giá trị của các biến độc lập, không thay đổi khi sao chép giá trị của biến này qua biến khác, áp dụng với kiểu dữ liệu primitive (Number, String, Boolean, undefined, null, Symbol)
-- Địa chỉ của biến: khi các biến trỏ cùng vào một địa chỉ thì giá trị của các biến đó phụ thuộc nhau, khi giá trị của một biến thay đổi thì giá trị của các biến còn lại thay đổi theo, áp dụng với kiểu dữ liệu Object, Array, Function
+- Giá trị của biến: giá trị của các biến độc lập, không thay đổi khi sao chép giá trị của biến này qua biến khác, áp dụng với kiểu dữ liệu primitive (`Number`, `String`, `Boolean`, `undefined`, `null`, `Symbol`)
+- Địa chỉ của biến: khi các biến trỏ cùng vào một địa chỉ thì giá trị của các biến đó phụ thuộc nhau, khi giá trị của một biến thay đổi thì giá trị của các biến còn lại thay đổi theo, áp dụng với kiểu dữ liệu `Object`, `Array`, `Function`
 
-7. Phân biệt call, bind và apply
+7. Phân biệt `call`, `bind` và `apply`
 
-- bind: xác định tham số this cho một function
-- call: xác định tham số this và gọi function với các tham số truyền vào, thường dùng để mượn hàm
-- apply: giống call nhưng các tham số được truyền toàn bộ vào trong mảng
+- `bind`: xác định tham số this cho một function
+- `call`: xác định tham số this và gọi function với các tham số truyền vào, thường dùng để mượn hàm
+- `apply`: giống call nhưng các tham số được truyền toàn bộ vào trong mảng
 
 ```js
 const person = {
@@ -131,7 +131,7 @@ console.log(getInfo.apply(person, ["DN"])); // Bin, 18, DN
 
 11. Các cách để clone một Object. Ưu điểm và nhược điểm
 
-- Sử dụng toán tử gán:
+- Sử dụng toán tử gán `=`:
   - Ưu: nhanh, gọn, lẹ, dễ hiểu
   - Nhược: vì object là kiểu tham chiếu nên khi gán thì obj2 trỏ đến địa chỉ của obj1, dẫn đến khi thay đổi giá trị của obj1 thì giá trị của obj2 cũng thay đổi theo
 
@@ -157,7 +157,7 @@ console.log(obj1); // { name: 'Bin', age: 23, address: { city: 'Hue', district: 
 console.log(obj2); // { name: 'Ben', age: 23, address: { city: 'Hue', district: 'TK' } }
 ```
 
-- Sử dụng Object.assign():
+- Sử dụng `Object.assign()`:
   - Ưu: nhìn khá tường minh, dễ hiểu
   - Nhược: giống với cách sử dụng spread
 
@@ -178,20 +178,20 @@ console.log(obj1); // { name: 'Bin', age: 23, address: { city: 'ĐN', district: 
 console.log(obj2); // { name: 'Ben', age: 23, address: { city: 'Hue', district: 'TK' } }
 ```
 
-13. Toán tử == và === khác và giống nhau như thế nào. Switch case là so sánh == hay ===
+13. Toán tử `==` và `===` khác và giống nhau như thế nào. Switch case là so sánh `==` hay `===`
 
-- Toán tử == so sánh hai biến cùng giá trị mà không quan tâm đến kiểu dữ liệu. `1 == "1"` // true
-- Toán tử === so sánh cả giá trị và kiểu dữ liệu của hai biến. `1 === "1"` // false
+- Toán tử `==` so sánh hai biến cùng giá trị mà không quan tâm đến kiểu dữ liệu. `1 == "1"` // true
+- Toán tử `===` so sánh cả giá trị và kiểu dữ liệu của hai biến. `1 === "1"` // false
 - Switch case là so sánh ===
 
-14. Phân biệt require và import
+14. Phân biệt `require` và `import`
 
-- require:
+- `require`:
   - Có thể gọi bất cứ đâu trong chương trình
   - Thực hiện đồng bộ
   - Lấy hết cả file, package => lãng phí bộ nhớ
-- import:
+- `import`:
   - Chỉ có thể gọi ở đầu chương trình
   - Thực hiện bất đồng bộ
   - Cho phép lấy những phần thực sự cần thiết => tiết kiệm bộ nhớ
-  - Muốn dùng import thì phải có type="module" ở thẻ ```html <script></script>```
+  - Muốn dùng import thì phải có `type="module"` ở thẻ `html <script></script>`
