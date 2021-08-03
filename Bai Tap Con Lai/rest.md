@@ -8,7 +8,7 @@
 
 - Callback hell là hiện tượng callback lồng callback lồng callback. Callback trên thực hiện xong thì đến callback dưới:
 
-```
+```js
   doSomething(function (a) {
     doSomethingMore(function (b) {
       doSomethingMore(function (c) {
