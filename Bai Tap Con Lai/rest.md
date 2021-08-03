@@ -194,4 +194,4 @@ console.log(obj2); // { name: 'Ben', age: 23, address: { city: 'Hue', district: 
   - Chỉ có thể gọi ở đầu chương trình
   - Thực hiện bất đồng bộ
   - Cho phép lấy những phần thực sự cần thiết => tiết kiệm bộ nhớ
-  - Muốn dùng import thì phải có type="module" ở thẻ `html<script></script>`
+  - Muốn dùng import thì phải có type="module" ở thẻ ```html <script></script>```
