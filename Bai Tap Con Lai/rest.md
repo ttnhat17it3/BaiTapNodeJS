@@ -91,8 +91,8 @@ for (let user of users) console.log(user);
 
 5. Phân biệt giá trị và địa chỉ của biến
 
-- Giá trị của biến: giá trị của các biến độc lập, không thay đổi khi sao chép giá trị của biến này qua biến khác, áp dụng với kiểu dữ liệu primitive (number, string, boolean, undefined, bigint, symbol)
-- Địa chỉ của biến: khi các biến trỏ cùng vào một địa chỉ thì giá trị của các biến đó phụ thuộc nhau, khi giá trị của một biến thay đổi thì giá trị của các biến còn lại thay đổi theo, áp dụng với kiểu dữ liệu object, array, function
+- Giá trị của biến: giá trị của các biến độc lập, không thay đổi khi sao chép giá trị của biến này qua biến khác, áp dụng với kiểu dữ liệu primitive (Number, String, Boolean, undefined, null, Symbol)
+- Địa chỉ của biến: khi các biến trỏ cùng vào một địa chỉ thì giá trị của các biến đó phụ thuộc nhau, khi giá trị của một biến thay đổi thì giá trị của các biến còn lại thay đổi theo, áp dụng với kiểu dữ liệu Object, Array, Function
 
 7. Phân biệt call, bind và apply
 
@@ -118,16 +118,16 @@ console.log(getInfo.apply(person, ["DN"])); // Bin, 18, DN
 8. Javascript có bao nhiêu kiểu dữ liệu
 
 - Javascript có 7 kiểu dữ liệu, trong đó:
-  - Number
-  - String
-  - null
-  - undefinded
-  - boolean
-  - symbol
-    được gọi là kiểu primitive.
+  - Number      |
+  - String      |
+  - null        |
+  - undefinded  | => được gọi là kiểu primitive.
+  - boolean     |
+  - Symbol      |
+
   - Object được gọi là kiểu non-primitive
 
-11. clone Object
+11. Các cách để clone một Object. Ưu điểm và nhược điểm
 
 - Sử dụng toán tử gán:
   - Ưu: nhanh, gọn, lẹ, dễ hiểu
