@@ -1,8 +1,8 @@
-1. Phân biệt setTimeout và setInterval
+1. Phân biệt `setTimeout` và `setInterval`
 
-- setTimeout: hàm thực thi sau bao nhiêu ms kể từ khi setTimeout được gọi
-- setInterval: thiết lập độ trễ cho các hàm sẽ được thực thiện lặp lại sau x ms
-  => Khác nhau: setTimeout chỉ kích hoạt hàm một lần, setInterval kích hoạt hàm sau một khoảng thời gian nhất định cho đến khi gọi clearInterval để dừng
+- `setTimeout`: hàm thực thi sau bao nhiêu ms kể từ khi setTimeout được gọi
+- `setInterval`: thiết lập độ trễ cho các hàm sẽ được thực thiện lặp lại sau x ms
+  => Khác nhau: `setTimeout` chỉ kích hoạt hàm một lần, `setInterval` kích hoạt hàm sau một khoảng thời gian nhất định cho đến khi gọi `clearInterval` để dừng
 
 2. Hiện tượng callback hell là gì
 
